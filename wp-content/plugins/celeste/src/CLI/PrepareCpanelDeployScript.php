@@ -33,7 +33,8 @@ class PrepareCpanelDeployScript {
             return;
         }
 
-        $script = 'deployment:
+        $script = '---
+deployment:
   tasks:
     - export DEPLOYPATH=/home/{username}/public_html/
     - /bin/cp -R wp-content/themes/{theme_name} $DEPLOYPATH
