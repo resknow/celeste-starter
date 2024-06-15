@@ -36,9 +36,9 @@ class PrepareCpanelDeployScript {
         $script = '---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/{username}/public_html/
-    - /bin/cp -R wp-content/themes/{theme_name} $DEPLOYPATH
-    - /bin/cp -R wp-content/plugins/celeste $DEPLOYPATH';
+    - export DEPLOYPATH=/home/{username}/public_html
+    - /bin/cp -R wp-content/themes/{theme_name} $DEPLOYPATH/wp-content/themes/
+    - /bin/cp -R wp-content/plugins/celeste $DEPLOYPATH/wp-content/plugins/';
 
         $script = str_replace( '{username}', $username, $script );
         $script = str_replace( '{theme_name}', $theme_name, $script );

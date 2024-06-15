@@ -1,6 +1,6 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/celestenext/public_html/
-    - /bin/cp -R wp-content/themes/celeste $DEPLOYPATH
-    - /bin/cp -R wp-content/plugins/celeste $DEPLOYPATH
+    - export DEPLOYPATH=/home/celestenext/public_html
+    - /bin/cp -R wp-content/themes/celeste $DEPLOYPATH/wp-content/themes/
+    - /bin/cp -R wp-content/plugins/celeste $DEPLOYPATH/wp-content/plugins/
