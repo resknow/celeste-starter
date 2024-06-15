@@ -1,0 +1,1 @@
+(()=>{var e=class extends HTMLElement{connectedCallback(){this.addEventListener("copy",t=>{let a=document.getSelection().baseNode.data.split("").reverse().join("");t.clipboardData.setData("text/plain",a),t.preventDefault()})}};customElements.get("celeste-email-address")||customElements.define("celeste-email-address",e);})();

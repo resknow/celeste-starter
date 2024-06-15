@@ -1,0 +1,55 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "resknow/button",
+	"version": "0.1.0",
+	"title": "Button",
+	"category": "theme",
+	"icon": "button",
+	"description": "Button",
+	"supports": {
+		"html": false,
+		"align": ["left", "center", "right"],
+		"spacing": {
+			"padding": true,
+			"__experimentalDefaultControls": {
+				"padding": true
+			}
+		}
+	},
+	"textdomain": "button",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"attributes": {
+		"href": {
+			"type": "string"
+		},
+		"type": {
+			"type": "string",
+			"default": "link"
+		},
+		"variant": {
+			"type": "string",
+			"default": "default"
+		},
+		"size": {
+			"type": "string",
+			"default": "lg"
+		},
+		"icon": {
+			"type": "string"
+		},
+		"iconPosition": {
+			"type": "string",
+			"default": "start"
+		},
+		"text": {
+			"type": "string"
+		},
+		"contentPosition": {
+			"type": "string",
+			"default": "topLeft"
+		}
+	}
+}

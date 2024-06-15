@@ -1,0 +1,15 @@
+.wp-block-resknow-button {
+	display: flex;
+
+	&.alignleft {
+		justify-content: flex-start;
+	}
+
+	&.aligncenter {
+		justify-content: center;
+	}
+
+	&.alignright {
+		justify-content: flex-end;
+	}
+}

@@ -1,0 +1,42 @@
+.wp-block-resknow-section {
+	&.has-background-image {
+		background-size: cover;
+		background-position: center;
+	}
+
+	/**
+	 * Collapse the bottom padding if this section is placed
+	 * above another one which does not a background color
+	 * or image explicitly set.
+	 *
+	 * TODO Document this change
+	 */
+	&.has-collapsed-bottom-space .section__content {
+		padding-block-end: 0;
+	}
+
+	&.has-collapsed-top-space .section__content {
+		padding-block-start: 0;
+	}
+
+	&.is-layout-constrained {
+		padding-inline: var(--wp--custom--spacing--8, 2rem);
+	}
+
+	.section__content {
+		padding-block: var(--wp--custom--spacing--content, 3rem);
+		padding-inline: var(--wp--custom--spacing--container, 5rem);
+	}
+
+	&.is-layout-constrained .section__content {
+		padding-inline: 0;
+	}
+
+	/**
+	 * Remove horizontal padding from the section content if the section
+	 * is inside another.
+	 */
+	.section .section__content {
+		padding-inline: 0;
+	}
+}

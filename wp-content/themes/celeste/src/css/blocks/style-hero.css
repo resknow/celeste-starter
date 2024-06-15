@@ -1,0 +1,3 @@
+.is-style-hero {
+    min-height: clamp(45rem, 44.1713rem + 3.5359vw, 47rem);
+}

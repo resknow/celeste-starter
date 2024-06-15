@@ -1,0 +1,35 @@
+<!-- Instant Reload Server -->
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		const webSocketPort = {{ port }};
+		const socket = new WebSocket(`ws://localhost:${webSocketPort}`);
+
+		socket.addEventListener('open', function (event) {
+			console.info('Connected to Instant Reload Server');
+		});
+
+		socket.addEventListener('message', function (event) {
+			let data = JSON.parse(event.data);
+
+			// Editor was loaded, go to that page
+			if (data?.details?.action === 'navigate' && data?.details?.destination) {
+				window.location.href = data.details.destination;
+				return;
+			}
+
+			if (data.event === 'reload') {
+				window.location.reload();
+				return;
+			}
+		});
+
+		socket.addEventListener('error', function (event) {
+			console.error('Instant Reload Server error:', event);
+		});
+
+		socket.addEventListener('close', function (event) {
+			console.warn('Instant Reload Server connection closed');
+		});
+	});
+</script>
+<!-- /Instant Reload Server -->

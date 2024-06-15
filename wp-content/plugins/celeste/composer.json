@@ -1,0 +1,25 @@
+{
+	"name": "resknow/celeste",
+	"description": "The toolkit for modern WordPress",
+	"type": "project",
+	"license": "MIT",
+	"autoload": {
+		"psr-4": {
+			"Celeste\\": "src/"
+		}
+	},
+	"authors": [
+		{
+			"name": "Chris Galbraith",
+			"email": "chris@resknow.co.uk"
+		}
+	],
+	"require": {
+		"erusev/parsedown": "^1.7",
+		"laravel/prompts": "^0.1.4",
+		"symfony/polyfill-mbstring": "~1.1",
+		"twig/twig": "3.5",
+		"nesbot/carbon": "^3.3",
+		"chrismademe/twilight": "^0.6.1"
+	}
+}

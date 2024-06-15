@@ -1,0 +1,14 @@
+<Element
+	:is="href ? 'a' : 'button'"
+	:class="['btn', class] | join(' ')"
+	:data-variant="variant"
+	:data-size="size"
+	:data-icon-position="iconPosition"
+	:data-has-icon="icon ? 'true' : 'false'"
+	:href="href"
+	:type="type"
+	@attributes
+>
+	<Icon @if="icon" :name="icon" class="w-5 h-5" />
+	{{ children | raw }}
+</Element>

@@ -1,0 +1,49 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "resknow/grid",
+  "version": "0.1.0",
+  "title": "Grid",
+  "category": "theme",
+  "icon": "grid-view",
+  "description": "Like columns, but better.",
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ],
+    "spacing": {
+      "padding": true,
+      "__experimentalDefaultControls": {
+        "padding": true
+      }
+    }
+  },
+  "textdomain": "grid",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "columns": {
+      "type": "number",
+      "default": 1
+    },
+    "columnsMd": {
+      "type": "number",
+      "default": 2
+    },
+    "columnsLg": {
+      "type": "number",
+      "default": null
+    },
+    "gap": {
+      "type": "string",
+      "default": "md"
+    },
+    "verticalAlignment": {
+      "type": "string",
+      "default": "center"
+    }
+  }
+}

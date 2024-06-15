@@ -1,0 +1,22 @@
+<div x-data="{ isOpen: false }" class="Drawer">
+    {{ slots.trigger | raw }}
+    <Button
+        @html="toggleText | default('Toggle Drawer')"
+        @if="not slots.trigger"
+        x-on:click="isOpen = !isOpen"
+        type="button"
+    />
+    <div
+        @html="children"
+        :class="{
+            'Drawer__Modal fixed bottom-0 inset-x-0 border-t border-gray-400/40 bg-white text-black transition duration-500 ease-in-out z-50 md:left-auto md:h-screen md:border-t-0 md:border-l': true,
+            'md:w-64': size == 'sm',
+            'md:w-80': not size or size == 'base',
+            'md:w-96': size == 'lg',
+            'md:w-120': size == 'xl',
+        } | cls"
+        x-cloak
+        x-bind:aria-hidden="!isOpen"
+        x-bind:data-state="isOpen ? 'open' : 'closed'"
+    />
+</div>

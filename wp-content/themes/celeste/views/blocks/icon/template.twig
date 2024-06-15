@@ -1,0 +1,7 @@
+<BlockWrapper :attributes="attributes" :block="block" :preview="is_preview">
+    <Icon
+        @if="fields.icon and fields.icon != 'none'"
+        :name="fields.icon"
+        :class="block.className"
+    />
+</BlockWrapper>

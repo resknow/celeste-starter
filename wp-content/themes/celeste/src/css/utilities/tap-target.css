@@ -1,0 +1,13 @@
+@layer utilities {
+	.tap-target {
+		position: relative;
+	}
+
+	.tap-target:after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+		transform: scale(1.5);
+	}
+}

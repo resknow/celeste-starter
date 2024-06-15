@@ -1,0 +1,39 @@
+:root {
+	--editor-sidebar-width: 380px;
+}
+
+.editor-post-title__input {
+	border-bottom: 2px dashed #eeeef0 !important;
+	margin-bottom: 24px !important;
+	text-align: center;
+}
+
+/* Gutenberg Editor Changes */
+.edit-post-layout.is-sidebar-opened .edit-post-plugin-sidebar__sidebar-layout,
+.edit-post-layout.is-sidebar-opened .edit-post-sidebar {
+	width: var(--editor-sidebar-width);
+}
+
+.edit-post-layout.is-sidebar-opened .edit-post-layout__content {
+	margin-right: var(--editor-sidebar-width);
+}
+
+.admin-list-label {
+	background-color: #2d2f35;
+	border-radius: 3px;
+	color: #fff;
+	display: inline-block;
+	padding: 6px 12px;
+	font-size: 12px;
+	font-weight: bold;
+
+	&.is-synced {
+		background-color: #2d42c1;
+	}
+}
+
+/* Hide Navigation link in Site Editor */
+.components-item-group div[role='listitem']:has(button[id='/navigation']),
+.components-item-group div[role='listitem']:has(div[data-wp-component='HStack'] > svg path[d*='M12 4c-4.4 0-8']) {
+	display: none;
+}

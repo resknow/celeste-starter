@@ -1,0 +1,19 @@
+.block-link {
+	position: relative;
+}
+
+.block-link a {
+	position: static;
+}
+
+.block-link a:after {
+	content: "";
+	display: block;
+	position: absolute;
+	inset: 0;
+}
+
+.block-link__content {
+	position: relative;
+	z-index: 1;
+}

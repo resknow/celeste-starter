@@ -1,0 +1,51 @@
+<BlockWrapper :attributes="attributes" :block="block" :preview="is_preview">
+
+	{% if is_preview %}
+
+		<div class="text-center text-lg px-container py-content">
+			<p>Delete this block to get started.</p>
+		</div>
+
+	{% else %}
+
+		<header class="wp-block-acf-welcome__hero">
+			<div class="wp-block-acf-welcome__hero-background">
+				{% include "blocks/welcome/mountain-scape.svg" %}
+			</div>
+			<div class="wp-block-acf-welcome__hero-overlay flex items-end justify-center pb-lg md:pb-3xl">
+				<div class="text-violet-100 flow flow-space-sm text-center">
+					<div class="celeste-logo relative text-center w-fit mx-auto">
+						<span class="block font-mono text-xs pb-1 text-right text-violet-200">v{{ util.theme_version }}</span>
+						{% include "blocks/welcome/celeste.svg" %}
+					</div>
+					<p class="text-lg">To get started, head over to the <a class="text-yellow-400 font-bold hover:text-yellow-300" href="/wp-admin/post.php?post=2&action=edit">Editor</a> and delete the <strong>Welcome</strong> block!</p>
+					<Icon name="caret-down" class="wp-block-acf-welcome__hero-scroll mx-auto" />
+				</div>
+			</div>
+		</header>
+
+		{% if changelog %}
+			<div
+				id="changelog"
+				class="changelog px-container py-20"
+				x-data="{ isExpanded: false }"
+				x-bind:data-expanded="isExpanded ? 'true' : 'false'"
+			>
+				<div class="prose">
+					<h2 class="h1">Changelog</h2>
+					{{ changelog | raw }}
+				</div>
+				<Button
+					size="sm"
+					type="button"
+					@click="isExpanded = !isExpanded"
+					x-text="isExpanded ? 'Show less' : 'Show more'"
+				>
+					Show more
+				</Button>
+			</div>
+		{% endif %}
+
+	{% endif %}
+
+</BlockWrapper>

@@ -1,0 +1,18 @@
+/**
+ * Core Cover Block
+ */
+.wp-block-cover {
+    padding: 0;
+}
+
+.wp-block-cover__background {
+    mix-blend-mode: multiply;
+}
+
+/**
+ * Core Image Block Caption
+ */
+.wp-element-caption {
+    color: var(--color-gray-600);
+    text-align: left;
+}

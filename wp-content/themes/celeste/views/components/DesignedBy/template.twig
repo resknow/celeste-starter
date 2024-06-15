@@ -1,0 +1,14 @@
+{% set logo = logo ?? 'center' %}
+
+<p @if="logo == 'start'" class="flex items-center text-gray-600 text-sm">
+	Web Design by <a class="ml-1" href="https://www.resknow.co.uk" rel="nofollow">Resknow</a>
+	<img class="ml-3" src="https://assets.resknow.co.uk/branding/resknow/r-48x48.png" width="28px" height="28px" alt="" />
+</p>
+
+<p @if="logo == 'center'" class="flex items-center text-gray-600 text-sm">
+	Web Design by <img class="ml-2" src="https://assets.resknow.co.uk/branding/resknow/r-48x48.png" width="28px" height="28px" alt="" /> <a class="ml-2" href="https://www.resknow.co.uk" rel="nofollow">Resknow</a>
+</p>
+
+<p @if="logo == 'end'" class="flex items-center text-gray-600 text-sm">
+	<img src="https://assets.resknow.co.uk/branding/resknow/r-48x48.png" width="28px" height="28px" alt="" /> <span class="ml-2">Web Design by <a href="https://www.resknow.co.uk" rel="nofollow">Resknow</a></span>
+</p>

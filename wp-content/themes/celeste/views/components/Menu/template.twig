@@ -1,0 +1,5 @@
+<div x-data="{ menuIsOpen: false }">
+	<MenuToggle />
+	<MenuMobile :menu="globals.menus[menu]" showPhoneNumber />
+	<MenuDesktop :menu="globals.menus[menu]" />
+</div>

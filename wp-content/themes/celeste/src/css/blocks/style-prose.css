@@ -1,0 +1,42 @@
+.is-style-prose > *:not(.alignwide), .prose > * {
+	max-width: 47rem;
+}
+
+.is-style-prose > * + *, .prose > * + * {
+	margin-block-start: var(--space-4);
+}
+
+.is-style-prose ul, .prose ul {
+	list-style: disc;
+}
+
+.is-style-prose ol, .prose ol {
+	list-style: demical;
+}
+
+.is-style-prose ul li, .prose ul li,
+.is-style-prose ol li, .prose ol li {
+	margin-inline-start: var(--space-8);
+	margin-block-start: var(--space-2);
+}
+
+.is-style-prose > * + :is(h1, h2, h3, h4, h5, h6), .prose > * + :is(h1, h2, h3, h4, h5, h6) {
+	margin-block-start: var(--space-10);
+}
+
+.is-style-prose > :is(h1, h2, h3, h4, h5, h6) + *, .prose > :is(h1, h2, h3, h4, h5, h6) + * {
+	margin-block-start: var(--space-2);
+}
+
+.is-style-prose > :is(.wp-block-image, img, video), .prose > :is(.wp-block-image, img, video) {
+	margin-block: var(--space-10);
+}
+
+.is-style-prose > :is(.breakout, .alignfull), .prose > :is(.breakout, .alignfull) {
+	max-width: 100%;
+}
+
+.is-style-prose[data-align="center"], .prose[data-align="center"]
+	.wp-element-caption {
+	text-align: center;
+}

@@ -1,0 +1,42 @@
+.wp-block.is-selected {
+	box-shadow: none;
+	outline: 1px dashed rgba(67, 56, 202, 1);
+	outline-offset: 2px;
+	border-radius: 4px;
+}
+
+.wp-block.is-selected .wp-block {
+	outline: 1px dashed rgba(0, 0, 0, 0.25);
+	outline-offset: 2px;
+	border-radius: 4px;
+}
+
+.block-editor-block-list__layout .block-editor-block-list__block:not([contenteditable]):focus:after {
+	box-shadow: none !important;
+	border-radius: 4px;
+	outline: 1px dashed rgba(67, 56, 202, 1);
+	outline-offset: 2px;
+}
+
+.wp-block.is-selected::before {
+	background-color: rgba(0, 0, 0, 0.8);
+	border-radius: 4px;
+	backdrop-filter: blur(1px);
+	color: white;
+	content: attr(data-title);
+	font-family: 'Operator Mono', 'JetBrains Mono', monospace;
+	font-size: 11px;
+	font-weight: normal;
+	left: 0;
+	letter-spacing: 0.8px;
+	padding: 2px 5px;
+	position: absolute;
+	text-transform: uppercase;
+	top: -90px;
+	z-index: 10;
+}
+
+/* Hide the empty fields notice for ACF Blocks */
+.acf-block-component.acf-block-panel:has(.acf-empty-block-fields) {
+	display: none;
+}

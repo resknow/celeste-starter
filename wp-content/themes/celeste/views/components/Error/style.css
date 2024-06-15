@@ -1,0 +1,86 @@
+.Error {
+    background-color: var(--color-gray-900, black);
+    border: 1px solid var(--color-yellow-500, yellow);
+    border-radius: 0.4em;
+    color: var(--color-gray-300, #ddd);
+    font-size: min(0.9em, 5cqw);
+    padding: var(--space-sm, 0.8em);
+}
+
+.Error h2 {
+    color: var(--color-yellow-500, yellow);
+    font-size: min(1em, 6cqw);
+    margin-block-end: var(--space-2, 0.5em);
+}
+
+.Error__details {
+    margin-block-start: var(--space-2, 0.5em);
+}
+
+.Error__details > * + * {
+    margin-block-start: var(--space-2, 0.5em);
+}
+
+.Error__details a:hover {
+    color: var(--color-yellow-500, yellow);
+}
+
+.Error__details details {
+    background-color: var(--color-gray-800, #333);
+    border-radius: 0.25em;
+    padding: var(--space-2, 0.5em) var(--space-4, 1em);
+}
+
+.Error__details summary {
+    font-weight: var(--weight-bold, bold);
+}
+
+.Error__details details[open] summary {
+    margin-block-end: var(--space-2, 0.5em);
+}
+
+.Error__details pre {
+    font-size: min(0.6em, 3cqw);
+}
+
+.Error__component-name {
+    color: var(--color-teal-400, teal);
+    font-family: var(--font-mono, monospace);
+}
+
+/* Stack Trace */
+
+.Error__trace > * + * {
+    margin-block-start: var(--space-1, 0.25em);
+}
+
+.TraceLine {
+    display: grid;
+    grid-template-columns: 2.5em 1fr;
+    gap: 0.5em;
+}
+
+.Trace__line {
+    font-weight: var(--weight-bold, bold);
+}
+
+.Trace__token {
+    font-family: var(--font-mono, monospace);
+}
+
+.Trace__class {
+    color: var(--color-teal-500, teal);
+}
+
+.Trace__type {
+    color: var(--color-white, white);
+}
+
+.Trace__function {
+    color: var(--color-yellow-500, yellow);
+}
+
+.Trace__file {
+    color: var(--color-gray-400, #888);
+    font-size: 0.8em;
+}

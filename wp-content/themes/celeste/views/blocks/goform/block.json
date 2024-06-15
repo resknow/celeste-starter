@@ -1,0 +1,43 @@
+{
+	"name": "goform",
+	"title": "Goform",
+	"description": "Goform",
+	"category": "theme",
+	"version": "1.0.0",
+	"icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 22.09 22.11\"><defs><style>.goformLogoCLS-1{fill:#e43e5a;}</style></defs><g id=\"Layer_2\" data-name=\"Layer 2\"><g id=\"Layer_1-2\" data-name=\"Layer 1\"><path class=\"goformLogoCLS-1\" d=\"M21.8,8.46a2.11,2.11,0,0,0-.49-.54L10.52.34A1.87,1.87,0,1,0,8.37,3.4l7.11,5L1.54,10.82a1.86,1.86,0,0,0,.65,3.67l13.93-2.43-5,7.1a1.86,1.86,0,0,0,.44,2.6h0a1.87,1.87,0,0,0,2.6-.44v0l7.58-10.78A1.88,1.88,0,0,0,22,9.86,1.81,1.81,0,0,0,21.8,8.46Z\"/></g></g></svg>",
+	"keywords": ["form"],
+	"supports": {
+		"jsx": true
+	},
+	"fields": [
+		{
+			"label": "Goform ID",
+			"name": "goform_id",
+			"type": "text",
+			"required": "true"
+		}
+	],
+	"acf": {
+		"mode": "preview",
+		"renderCallback": "render_acf_block"
+	},
+	"celeste": {
+		"requires": [
+			{
+				"type": "component",
+				"name": "BlockWrapper",
+				"version": "1.0.0"
+			},
+			{
+				"type": "component",
+				"name": "Goform",
+				"version": "1.0.0"
+			},
+			{
+				"type": "block",
+				"name": "goform-input",
+				"version": "1.0.0"
+			}
+		]
+	}
+}

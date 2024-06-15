@@ -1,0 +1,9 @@
+<BlockWrapper :attributes="attributes" :block="block" :preview="is_preview">
+    <header
+        class="page-header container flex gap-md items-center justify-between py-md"
+        :data-preview="is_preview ? 'true' : 'false'"
+    >
+        <Logo :preview="is_preview" />
+        <Menu menu="main-menu" :preview="is_preview" />
+    </header>
+</BlockWrapper>

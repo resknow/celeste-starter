@@ -1,0 +1,373 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"settings": {
+		"color": {
+			"custom": false,
+			"customGradient": false,
+			"defaultGradients": false,
+			"defaultPalette": false,
+			"link": true,
+			"palette": [
+				{
+					"slug": "base",
+					"color": "#fff",
+					"name": "Base"
+				},
+				{
+					"slug": "contrast",
+					"color": "#030712",
+					"name": "Contrast"
+				},
+				{
+					"slug": "primary",
+					"color": "#03fccf",
+					"name": "Primary"
+				},
+				{
+					"slug": "primary-contrast",
+					"color": "#17211f",
+					"name": "Primary Contrast"
+				},
+				{
+					"slug": "secondary",
+					"color": "#600aa6",
+					"name": "Secondary"
+				},
+				{
+					"slug": "secondary-contrast",
+					"color": "#e1c6f7",
+					"name": "Secondary Contrast"
+				},
+				{
+					"slug": "tertiary",
+					"color": "#121cde",
+					"name": "Tertiary"
+				},
+				{
+					"slug": "tertiary-contrast",
+					"color": "#d0d2f7",
+					"name": "Tertiary Contrast"
+				},
+				{
+					"slug": "highlight",
+					"color": "#eab308",
+					"name": "Highlight"
+				},
+				{
+					"slug": "link-base",
+					"color": "#1d4ed8",
+					"name": "Link"
+				},
+				{
+					"slug": "gray-950",
+					"color": "#030712",
+					"name": "Gray 950"
+				},
+				{
+					"slug": "gray-900",
+					"color": "#111827",
+					"name": "Gray 900"
+				},
+				{
+					"slug": "gray-800",
+					"color": "#1f2937",
+					"name": "Gray 800"
+				},
+				{
+					"slug": "gray-700",
+					"color": "#374151",
+					"name": "Gray 700"
+				},
+				{
+					"slug": "gray-600",
+					"color": "#4b5563",
+					"name": "Gray 600"
+				},
+				{
+					"slug": "gray-500",
+					"color": "#6b7280",
+					"name": "Gray 500"
+				},
+				{
+					"slug": "gray-400",
+					"color": "#9ca3af",
+					"name": "Gray 400"
+				},
+				{
+					"slug": "gray-300",
+					"color": "#d1d5db",
+					"name": "Gray 300"
+				},
+				{
+					"slug": "gray-200",
+					"color": "#e5e7eb",
+					"name": "Gray 200"
+				},
+				{
+					"slug": "gray-100",
+					"color": "#f3f4f6",
+					"name": "Gray 100"
+				},
+				{
+					"slug": "gray-50",
+					"color": "#f9fafb",
+					"name": "Gray 50"
+				}
+			],
+			"gradients": [
+				{
+					"slug": "primary-to-secondary",
+					"gradient": "linear-gradient(to bottom right, var(--wp--preset--color--primary) 0%, var(--wp--preset--color--secondary) 100%)",
+					"name": "Primary to Secondary"
+				},
+				{
+					"slug": "secondary-to-primary",
+					"gradient": "linear-gradient(to top left, var(--wp--preset--color--primary) 0%, var(--wp--preset--color--secondary) 100%)",
+					"name": "Secondary to Primary"
+				},
+				{
+					"slug": "black-to-transparent-ltr",
+					"gradient": "linear-gradient(to right, var(--wp--preset--color--black) 0%, rgba(0, 0, 0, 0) 100%)",
+					"name": "Black To Transparent LTR"
+				},
+				{
+					"slug": "black-to-transparent-rtl",
+					"gradient": "linear-gradient(to left, var(--wp--preset--color--black) 0%, rgba(0, 0, 0, 0) 100%)",
+					"name": "Black To Transparent rtl"
+				},
+				{
+					"slug": "black-to-transparent-ttb",
+					"gradient": "linear-gradient(to bottom, var(--wp--preset--color--black) 0%, rgba(0, 0, 0, 0) 100%)",
+					"name": "Black To Transparent TTB"
+				},
+				{
+					"slug": "black-to-transparent-btt",
+					"gradient": "linear-gradient(to top, var(--wp--preset--color--black) 0%, rgba(0, 0, 0, 0) 100%)",
+					"name": "Black To Transparent BTT"
+				}
+			]
+		},
+		"custom": {
+			"leading": {
+				"none": 1,
+				"tight": 1.1,
+				"base": 1.65,
+				"loose": 1.9
+			},
+			"tracking": {
+				"tight": "-0.025em",
+				"base": "auto",
+				"wide": "0.05em",
+				"loose": "0.1em"
+			},
+			"radius": {
+				"xs": "0.5rem",
+				"sm": "0.75rem",
+				"default": "1rem",
+				"md": "2rem",
+				"lg": "3rem",
+				"full": "99999px"
+			},
+			"weight": {
+				"normal": 400,
+				"bold": 700
+			},
+			"maxWidth": {
+				"xs": "24rem",
+				"sm": "40rem",
+				"md": "52rem",
+				"lg": "64rem"
+			},
+			"spacing": {
+				"0": "0rem",
+				"1": "0.25rem",
+				"2": "0.5rem",
+				"3": "0.75rem",
+				"4": "1rem",
+				"5": "1.25rem",
+				"6": "1.5rem",
+				"8": "2rem",
+				"10": "2.5rem",
+				"12": "3rem",
+				"16": "4rem",
+				"20": "5rem",
+				"24": "6rem",
+				"28": "7rem",
+				"32": "8rem",
+				"40": "10rem",
+				"48": "12rem",
+				"56": "14rem",
+				"64": "16rem",
+				"80": "20rem",
+				"96": "24rem",
+				"container": "calc(calc(100vw - var(--wp--style--global--wide-size)) / 2)",
+				"content": "clamp(3rem, 1.3974rem + 6.8376vw, 5.5rem)",
+				"px": "0.06rem",
+				"half": "0.125rem"
+			}
+		},
+		"layout": {
+			"contentSize": "min(85vw, 52rem)",
+			"wideSize": "min(85vw, 80rem)"
+		},
+		"spacing": {
+			"margin": false,
+			"padding": true,
+			"blockGap": true,
+			"spacingSizes": [
+				{
+					"size": "clamp(0.5rem, 0.3397rem + 0.6838vw, 0.75rem)",
+					"slug": "xs",
+					"name": "X-Small"
+				},
+				{
+					"size": "clamp(0.75rem, 0.5428rem + 0.884vw, 1.25rem)",
+					"slug": "sm",
+					"name": "Small"
+				},
+				{
+					"size": "clamp(1rem, 0.5856rem + 1.768vw, 2rem)",
+					"slug": "md",
+					"name": "Medium"
+				},
+				{
+					"size": "clamp(1.5rem, 0.8785rem + 2.6519vw, 3rem)",
+					"slug": "lg",
+					"name": "Large"
+				},
+				{
+					"size": "clamp(2rem, 1.1713rem + 3.5359vw, 4rem)",
+					"slug": "xl",
+					"name": "X-Large"
+				},
+				{
+					"size": "clamp(2.5rem, 1.4641rem + 4.4199vw, 5rem)",
+					"slug": "2xl",
+					"name": "2X-Large"
+				},
+				{
+					"size": "clamp(3rem, 1.7569rem + 5.3039vw, 6rem)",
+					"slug": "3xl",
+					"name": "3X-Large"
+				}
+			]
+		},
+		"shadow": {
+			"defaultPresets": false,
+			"presets": [
+				{
+					"name": "Small",
+					"slug": "sm",
+					"shadow": "0 1px 2px 0 rgb(0 0 0 / 0.05);"
+				},
+				{
+					"name": "Base",
+					"slug": "default",
+					"shadow": "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)"
+				},
+				{
+					"name": "Medium",
+					"slug": "md",
+					"shadow": "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)"
+				},
+				{
+					"name": "Large",
+					"slug": "lg",
+					"shadow": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)"
+				},
+				{
+					"name": "XL",
+					"slug": "xl",
+					"shadow": "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)"
+				},
+				{
+					"name": "2XL",
+					"slug": "2xl",
+					"shadow": "0 25px 50px -12px rgb(0 0 0 / 0.25)"
+				}
+			]
+		},
+		"typography": {
+			"customFontSize": false,
+			"dropCap": false,
+			"textTransform": true,
+			"letterSpacing": true,
+			"lineHeight": true,
+			"textDecoration": false,
+			"fontWeight": true,
+			"fontFamilies": [
+				{
+					"slug": "base",
+					"fontFamily": "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol",
+					"name": "Base"
+				},
+				{
+					"slug": "mono",
+					"fontFamily": "JetBrains Mono, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace",
+					"name": "Mono"
+				}
+			],
+			"fontSizes": [
+				{
+					"slug": "xs",
+					"size": "clamp(0.65rem, 0.5859rem + 0.2735vw, 0.75rem)",
+					"name": "XS"
+				},
+				{
+					"slug": "sm",
+					"size": "clamp(0.75rem, 0.6987rem + 0.2188vw, 0.83rem)",
+					"name": "SM"
+				},
+				{
+					"slug": "base",
+					"size": "clamp(0.75rem, 0.5897rem + 0.6838vw, 1rem)",
+					"name": "BASE"
+				},
+				{
+					"slug": "lg",
+					"size": "clamp(0.83rem, 0.5928rem + 1.012vw, 1.2rem)",
+					"name": "LG"
+				},
+				{
+					"slug": "xl",
+					"size": "clamp(1rem, 0.7179rem + 1.2034vw, 1.44rem)",
+					"name": "XL"
+				},
+				{
+					"slug": "2xl",
+					"size": "clamp(1.2rem, 0.8615rem + 1.4441vw, 1.728rem)",
+					"name": "2XL"
+				},
+				{
+					"slug": "3xl",
+					"size": "clamp(1.44rem, 1.0336rem + 1.734vw, 2.074rem)",
+					"name": "3XL"
+				},
+				{
+					"slug": "4xl",
+					"size": "clamp(1.728rem, 1.2408rem + 2.0786vw, 2.488rem)",
+					"name": "4XL"
+				},
+				{
+					"slug": "5xl",
+					"size": "clamp(2.074rem, 1.4894rem + 2.4944vw, 2.986rem)",
+					"name": "5XL"
+				},
+				{
+					"slug": "6xl",
+					"size": "clamp(2.986rem, 2.5658rem + 1.7927vw, 4rem)",
+					"name": "6XL"
+				}
+			]
+		},
+		"blocks": {
+			"core/paragraph": {
+				"color": {
+					"background": false,
+					"gradients": []
+				}
+			}
+		}
+	}
+}

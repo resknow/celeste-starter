@@ -1,0 +1,62 @@
+{% set classes = {
+	link: 'text-gray-700 flex items-center gap-1 text-sm no-underline uppercase',
+	link_active: 'text-blue-600 font-bold',
+	child_link_active: 'text-blue-600 font-bold',
+} %}
+
+<nav class="hidden lg:block">
+	<ul class="flex items-center gap-5" role="list">
+
+		{% for link in menu %}
+			{% set alpine_setup = 'x-data="{ isOpen: false }"' %}
+			{% set link_is_active = link.post_ID == get_the_ID() %}
+
+			<li
+				@attributes="alpine_setup"
+				class="relative"
+			>
+				<a
+					:class="{
+						'text-gray-700 flex items-center gap-1 text-sm no-underline uppercase': true,
+						'text-blue-600 font-bold': link_is_active,
+					} | cls"
+					:href="link.url"
+					:@click.prevent="link.children ? 'isOpen = !isOpen' : null"
+				>
+					<span>{{ link.title | raw }}</span>
+					{% if link.children %}
+						<Icon name="caret-down" />
+					{% endif %}
+				</a>
+
+				{% if link.children %}
+				<div
+					x-cloak
+					x-show="isOpen"
+					x-transition.origin.top.left
+					@click.outside="isOpen = false"
+					class="bg-white rounded-sm shadow-xl p-6 absolute -left-3 top-8 w-48 overflow-hidden z-40"
+				>
+					<ul class="flow flow-space-2" role="list">
+						{% for key, child in link.children %}
+						<li class="relative">
+							{% set child_is_active = child.post_ID == get_the_ID() %}
+							<a
+								:class="{
+									'text-gray-700 flex items-center gap-1 text-sm no-underline uppercase': true,
+									'text-blue-600 font-bold': child_is_active,
+								} | cls"
+								:href="child.url"
+							>
+								{{ child.title | raw }}
+							</a>
+						</li>
+						{% endfor %}
+					</ul>
+				</div>
+				{% endif %}
+			</li>
+		{% endfor %}
+
+	</ul>
+</nav>

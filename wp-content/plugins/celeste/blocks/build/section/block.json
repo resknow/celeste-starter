@@ -1,0 +1,62 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "resknow/section",
+  "version": "0.1.0",
+  "title": "Section",
+  "category": "theme",
+  "icon": "align-wide",
+  "description": "Similar to a group, but with some better options",
+  "supports": {
+    "align": [
+      "full"
+    ],
+    "anchor": true,
+    "color": {
+      "background": true,
+      "link": true,
+      "text": true,
+      "gradients": true
+    },
+    "html": false,
+    "spacing": {
+      "blockGap": true,
+      "padding": true,
+      "__experimentalDefaultControls": {
+        "padding": true,
+        "blockGap": true
+      }
+    },
+    "layout": true
+  },
+  "textdomain": "section",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    },
+    "mediaId": {
+      "type": "number",
+      "default": 0
+    },
+    "mediaUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "collapseBottomSpace": {
+      "type": "boolean",
+      "default": false
+    },
+    "collapseTopSpace": {
+      "type": "boolean",
+      "default": false
+    },
+    "tagName": {
+      "type": "string",
+      "default": "div"
+    }
+  }
+}

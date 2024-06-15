@@ -1,0 +1,23 @@
+<div class="Error">
+    {% if env == "local" %}
+        <h2>Error rendering <span class="Error__component-name">&lt;{{ component }} /&gt;</span></h2>
+        <p>{{ error.message | raw }}</p>
+        <div class="Error__details">
+            <details>
+                <summary>Context</summary>
+                {{ dump(context) }}
+            </details>
+            <details>
+                <summary>Trace</summary>
+                <div class="Error__trace">
+                    {% for item in error.getTrace() %}
+                        {{ render_component("Error/TraceLine", { trace: item, root: root }) }}
+                    {% endfor %}
+                </div>
+            </details>
+        </div>
+    {% else %}
+        <h2>Something went wrong</h2>
+        <p>Sorry, we're having trouble displaying this content. Please try again later.</p>
+    {% endif %}
+</div>

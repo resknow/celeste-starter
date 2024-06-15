@@ -1,0 +1,13 @@
+<div
+    x-data="backToTop"
+    class="absolute top-0 right-0 h-screen w-px z-50 {{ class }}"
+>
+    <div
+        class="fixed bottom-md right-md opacity-100 visible transition duration-200"
+        x-bind:class="{ 'visible opacity-100': !isIntersecting, 'invisible opacity-0': isIntersecting }"
+    >
+        <Button size="sm" :href="href" icon="arrow-up">
+            <span class="sr-only">{{ label }}</span>
+        </Button>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+@layer utilities {
+    .container {
+		padding-inline: var(--wp--custom--spacing--container);
+		margin-inline: auto;
+		max-width: unset;
+	}
+}

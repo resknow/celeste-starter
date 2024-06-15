@@ -1,0 +1,18 @@
+<div class="Select">
+    <div class="flex flex-wrap gap-xs">
+        <label :for="id | default(name)" :class="showLabel ? 'sr-only' : null">{{ label }}</label>
+        <span @if="not required" class="Select__optional-marker text-xs uppercase text-gray-500 font-normal">
+            Optional
+        </span>
+    </div>
+    <div class="Select__inner relative">
+        <select
+            :id="id | default(name)"
+            :name="name"
+            @attributes
+        >
+            {{ children | raw }}
+        </select>
+        <Icon :name="icon | default('caret-down')" class="Select__icon" />
+    </div>
+</div>

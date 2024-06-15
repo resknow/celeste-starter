@@ -1,0 +1,26 @@
+.Select > * + * {
+    margin-block-start: var(--Input--flow-spacce, 0.4em);
+}
+
+.Select__inner {
+    display: grid;
+}
+
+.Select__inner > * {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.Select__inner select {
+    padding-inline-end: var(--Select--padding-end, var(--space-8));
+}
+
+.Select__icon {
+    color: var(--Select--icon-color, var(--color-gray-500));
+    align-self: center;
+    height: var(--Select--icon-size, 1em);
+    width: var(--Select--icon-size, 1em);
+    line-height: 1;
+    justify-self: end;
+    margin-inline-end: var(--Select--padding, var(--space-3));
+}

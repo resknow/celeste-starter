@@ -1,0 +1,21 @@
+<div class="Input">
+    <div class="flex flex-wrap gap-xs">
+        <label :for="id | default(name)">{{ label }}</label>
+        <span @if="not required" class="Input__optional-marker text-xs uppercase text-gray-500 font-normal">
+            Optional
+        </span>
+    </div>
+    <textarea
+        :id="id | default(name)"
+        :name="name"
+        @attributes
+        @if="type == 'textarea'"
+    />
+    <input
+        :id="id | default(name)"
+        :name="name"
+        :type="type"
+        @attributes
+        @if="type != 'textarea'"
+    />
+</div>

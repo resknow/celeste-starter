@@ -1,0 +1,46 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "resknow/custom-field",
+  "title": "Custom Field",
+  "description": "Display a simple custom field value",
+  "version": "0.1.0",
+  "category": "theme",
+  "icon": "menu",
+  "supports": {
+    "html": false,
+    "color": {
+      "background": true,
+      "text": true,
+      "gradients": true,
+      "link": true,
+      "enableContrastChecker": true
+    },
+    "typography": {
+      "fontSize": true
+    }
+  },
+  "attributes": {
+    "fieldName": {
+      "type": "string",
+      "default": null
+    },
+    "fieldValue": {
+      "type": "string",
+      "default": null
+    },
+    "postId": {
+      "type": "string",
+      "default": null
+    }
+  },
+  "textdomain": "menu",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "usesContext": [
+    "postId",
+    "postType",
+    "queryId"
+  ]
+}

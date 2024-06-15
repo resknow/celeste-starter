@@ -1,0 +1,35 @@
+<div
+	x-bind:data-state="menuIsOpen ? 'open' : 'closed'"
+	x-on:keyup.escape="menuIsOpen = false"
+	class="menu-mobile-container"
+>
+	<nav
+		x-bind:data-state="menuIsOpen ? 'open' : 'closed'"
+		aria-label="Main menu"
+		class="menu-mobile"
+		id="main-menu"
+		role="navigation"
+	>
+		<ul
+			class="primary-menu"
+			role="list"
+			data-state="active"
+		>
+			<li @for="key, link in menu">
+				<a
+					class="menu__link"
+					:href="link.url"
+					:data-active="link.post_ID == get_the_ID() ? 'true' : 'false'"
+					@html="link.title"
+				/>
+			</li>
+		</ul>
+
+		<div @if="showPhoneNumber" class="menu-mobile__phone">
+			<p class="text-gray-30 uppercase text-sm tracking-wide">
+				Call Us
+			</p>
+			<a :href="['tel:', globals.phone] | join" @text="globals.phone" />
+		</div>
+	</nav>
+</div>

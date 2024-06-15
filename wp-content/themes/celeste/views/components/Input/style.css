@@ -1,0 +1,3 @@
+.Input > * + * {
+    margin-block-start: var(--Input--flow-spacce, 0.4em);
+}

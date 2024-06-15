@@ -1,0 +1,31 @@
+<!-- wp:acf/layout {"name":"acf/layout","mode":"preview"} -->
+<!-- wp:acf/header {"name":"acf/header","mode":"preview"} /-->
+
+<!-- wp:resknow/section {"style":{"spacing":{"blockGap":"var:preset|spacing|sm"}}} -->
+<div class="wp-block-resknow-section alignfull section"><div class="section__content"><!-- wp:group {"layout":{"type":"default"}} -->
+<div class="wp-block-group"><!-- wp:query-title {"type":"archive","showPrefix":false} /--></div>
+<!-- /wp:group -->
+
+<!-- wp:query {"queryId":0,"query":{"perPage":9,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true}} -->
+<div class="wp-block-query"><!-- wp:post-template {"style":{"spacing":{"blockGap":"var:preset|spacing|md"}},"layout":{"type":"grid","columnCount":3}} -->
+<!-- wp:acf/post-card {"name":"acf/post-card","data":{"field_post-card-query_type":"auto"},"mode":"preview"} /-->
+<!-- /wp:post-template -->
+
+<!-- wp:query-pagination -->
+<!-- wp:query-pagination-previous /-->
+
+<!-- wp:query-pagination-numbers /-->
+
+<!-- wp:query-pagination-next /-->
+<!-- /wp:query-pagination -->
+
+<!-- wp:query-no-results -->
+<!-- wp:paragraph {"placeholder":"Add text or blocks that will display when a query returns no results."} -->
+<p></p>
+<!-- /wp:paragraph -->
+<!-- /wp:query-no-results --></div>
+<!-- /wp:query --></div></div>
+<!-- /wp:resknow/section -->
+
+<!-- wp:acf/footer {"name":"acf/footer","mode":"preview"} /-->
+<!-- /wp:acf/layout -->

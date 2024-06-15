@@ -1,0 +1,7 @@
+<BlockWrapper :attributes="attributes" :block="block" :preview="is_preview">
+    <SkipLink @if="not is_preview" />
+    <div>
+        <InnerBlocks />
+    </div>
+    <BackToTop @if="not is_preview" />
+</BlockWrapper>

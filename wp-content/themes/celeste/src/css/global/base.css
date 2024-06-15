@@ -1,0 +1,151 @@
+@layer base {
+	body {
+		color: var(--color-gray-800);
+		font-family: var(--font-base, sans-serif);
+		font-size: var(--size-base);
+		font-smoothing: antialiased;
+		line-height: var(--leading-base);
+		scroll-behavior: smooth;
+	}
+
+	:where([id]) {
+		scroll-margin-block-start: var(--space-xl);
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	.h1,
+	.h2,
+	.h3,
+	.h4,
+	.h5,
+	.h6 {
+		font-weight: var(--weight-bold);
+		letter-spacing: var(--tracking-tight);
+		line-height: var(--leading-tight);
+		text-wrap: balance;
+	}
+
+	h1,
+	.h1 {
+		font-size: var(--size-4xl);
+	}
+
+	h2,
+	.h2 {
+		font-size: var(--size-2xl);
+	}
+
+	h3,
+	.h3 {
+		font-size: var(--size-xl);
+	}
+
+	h4,
+	.h4 {
+		font-size: var(--size-lg);
+	}
+
+	a {
+		color: var(--color-blue-600);
+		position: relative;
+		text-decoration: underline;
+		text-decoration-offset: 0.25em;
+		text-decoration-color: var(--color-black);
+	}
+
+	a:hover {
+		color: var(--color-blue-700);
+		text-decoration-color: currentColor;
+	}
+
+	[disabled] {
+		cursor: not-allowed;
+		opacity: 0.5;
+	}
+
+	svg {
+		fill: currentColor;
+		width: 1em;
+		height: 1em;
+	}
+
+	/* Remove all animations and transitions for people that prefer not to see them */
+	@media (prefers-reduced-motion: reduce) {
+		* {
+			animation-duration: 0.01ms !important;
+			animation-iteration-count: 1 !important;
+			transition-duration: 0.01ms !important;
+			scroll-behavior: auto !important;
+		}
+	}
+
+	/* Override Cookie Consent button color */
+	cookie-consent-banner button {
+		box-shadow: var(--shadow-xl);
+		color: var(--color-white);
+		font-weight: var(--weight-bold);
+	}
+
+	form {
+		accent-color: var(--color-primary);
+	}
+
+	label {
+		display: block;
+		font-family: inherit;
+		font-weight: var(--weight-bold);
+		line-height: var(--leading-none);
+	}
+
+	input[type="text"],
+	input[type="password"],
+	input[type="tel"],
+	input[type="email"],
+	input[type="number"],
+	input[type="datetime-local"],
+	input[type="date"],
+	select,
+	textarea {
+		appearance: none;
+		background-color: var(--color-white);
+		border: 1px solid var(--color-gray-300);
+		border-radius: var(--radius-sm);
+		color: var(--color-black);
+		display: block;
+		font-family: inherit;
+		font-size: var(--size-base);
+		padding: var(--space-2) var(--space-3);
+		width: 100%;
+	}
+
+	input[type="text"][data-state="invalid"],
+	input[type="password"][data-state="invalid"],
+	input[type="tel"][data-state="invalid"],
+	input[type="email"][data-state="invalid"],
+	input[type="number"][data-state="invalid"],
+	input[type="datetime-local"][data-state="invalid"],
+	input[type="date"][data-state="invalid"],
+	select[data-state="invalid"],
+	textarea[data-state="invalid"] {
+		border-color: var(--color-red-500);
+	}
+
+	input[type="text"]:focus,
+	input[type="password"]:focus,
+	input[type="tel"]:focus,
+	input[type="email"]:focus,
+	input[type="number"]:focus,
+	input[type="datetime-local"]:focus,
+	input[type="date"]:focus,
+	select:focus,
+	textarea:focus {
+		@apply ring-2 ring-offset-1 ring-secondary-contrast;
+		border-color: var(--color-secondary);
+		outline: none;
+	}
+}

@@ -1,0 +1,19 @@
+<div class="TraceLine">
+    <p class="Trace__line">{{ trace.line }}</p>
+
+    <div>
+        {% if trace.class %}
+            <p>
+                <span class="Trace__token Trace__class">{{ trace.class }}</span>
+                <span class="Trace__token Trace__type">{{ trace.type }}</span>
+                <span class="Trace__token Trace__function">{{ trace.function }}()</span>
+            </p>
+        {% else %}
+            <p>
+                <span class="Trace__token Trace__function">{{ trace.function }}()</span>
+            </p>
+        {% endif %}
+
+        <a class="Trace__file" href="vscode://file/{{ trace.file }}">{{ trace.path }}</a>
+    </div>
+</div>

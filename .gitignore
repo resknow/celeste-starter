@@ -1,0 +1,41 @@
+# WordPress Core
+wp-admin/
+wp-includes/
+/index.php
+/readme.html
+/license.txt
+/wp-*.php
+/xmlrpc.php
+/local-*.php
+/.htaccess
+
+# Ignore everything in wp-content
+wp-content/*
+
+# Unignore the themes directory
+!wp-content/themes/
+
+# Unignore the plugins directory itself, so we can unignore specific subdirectories
+!wp-content/plugins/
+
+# Ignore all subdirectories in plugins
+wp-content/plugins/*
+
+# Unignore the celeste plugin
+!wp-content/plugins/celeste/
+wp-content/plugins/celeste/.twig/
+wp-content/themes/index.php
+
+# ignore core themes
+wp-content/themes/twenty*/
+
+# ignore node dependency directories
+node_modules/
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+*.mp4
+error_log
+.DS_Store

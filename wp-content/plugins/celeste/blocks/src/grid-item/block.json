@@ -1,0 +1,41 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "resknow/grid-item",
+	"version": "0.1.0",
+	"title": "Grid Item",
+	"parent": ["resknow/grid"],
+	"category": "theme",
+	"icon": "columns",
+	"description": "A container block for grid content.",
+	"supports": {
+		"html": false,
+		"spacing": {
+			"blockGap": true,
+			"padding": true,
+			"__experimentalDefaultControls": {
+				"padding": true,
+				"blockGap": true
+			}
+		},
+		"layout": true
+	},
+	"textdomain": "grid",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"attributes": {
+		"maxColumns": {
+			"type": "number",
+			"default": 6
+		},
+		"span": {
+			"type": "number",
+			"default": 1
+		},
+		"start": {
+			"type": "number",
+			"default": null
+		}
+	}
+}

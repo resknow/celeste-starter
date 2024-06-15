@@ -1,0 +1,38 @@
+html:has(#wpadminbar) {
+	margin-top: initial !important;
+}
+
+#wpadminbar {
+	border-radius: 999px;
+	box-shadow: var(--shadow-lg);
+	height: auto;
+	position: fixed;
+	top: unset;
+	bottom: 12px;
+	left: 12px;
+	padding: 4px 12px;
+	right: 12px;
+	width: auto;
+	opacity: 0;
+	transform: translateY(4rem);
+	transition: all 0.3s ease-in-out;
+}
+
+#wpadminbar .menupop .ab-sub-wrapper {
+	bottom: 2rem;
+}
+
+#wpadminbar:before {
+	content: '';
+	display: block;
+	height: 4.5rem;
+	position: absolute;
+	bottom: -12px;
+	left: -12px;
+	right: -12px;
+}
+
+#wpadminbar:hover {
+	opacity: 1;
+	transform: translateY(0);
+}
