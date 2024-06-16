@@ -20,6 +20,6 @@
 		"symfony/polyfill-mbstring": "~1.1",
 		"twig/twig": "3.5",
 		"nesbot/carbon": "^3.3",
-		"chrismademe/twilight": "^0.6.1"
+		"chrismademe/twilight": "^0.7.0"
 	}
 }
